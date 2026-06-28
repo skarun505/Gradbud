@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Gradbud</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .thankyou-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .thankyou-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
+  }
+  .thankyou-content::before {
+    content: '';
+    position: absolute;
+    bottom: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: var(--orange);
+    opacity: 0.05;
+    border-radius: 50%;
+  }
+  .thankyou-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+  .thankyou-content h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .thankyou-content p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 17px 32px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,0.05);
+  }
+</style>
+</head>
+<body>
+
+<div class="thankyou-wrapper">
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <span class="logo-text">Grad<span>bud.</span></span>
+      <span class="logo-tagline">dreams to degrees</span>
+    </div>
+  </nav>
+
+  <div class="thankyou-content">
+    <div class="thankyou-icon">✅</div>
+    <h1>We've received your details</h1>
+    <p>Thank you for your interest! Someone from Dr. Ashish's team will call you within 24 hours to discuss your options.</p>
+    
+    <a href="/" class="btn-primary" style="max-width: 300px; margin-bottom: 16px;">Explore the Main Website</a>
+    <a href="javascript:history.back()" class="btn-secondary" style="max-width: 300px;">Go Back</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">© 2026 Gradbud. All rights reserved.</div>
+  </footer>
+</div>
+
+</body>
+</html>
