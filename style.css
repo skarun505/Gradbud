@@ -66,6 +66,13 @@ nav {
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #e05508;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245,98,15,0.25);
 }
 
 /* HERO */
@@ -135,6 +142,13 @@ nav {
   border: none;
   cursor: pointer;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e05508;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245,98,15,0.3);
 }
 
 /* TRUST BAR */
@@ -207,6 +221,13 @@ nav {
   display: flex;
   gap: 14px;
   align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  border-color: rgba(245,98,15,0.3);
 }
 
 .highlight-icon {
@@ -284,6 +305,13 @@ nav {
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.reality-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
 }
 
 .reality-check {
@@ -452,6 +480,13 @@ nav {
   border-radius: 12px;
   padding: 22px;
   margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.counselor-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245,98,15,0.3);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .counselor-name {
@@ -562,6 +597,7 @@ input, select {
 input:focus, select:focus {
   outline: none;
   border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(245,98,15,0.15);
 }
 
 select {
@@ -655,6 +691,13 @@ select {
   border: none;
   cursor: pointer;
   margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #e05508;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245,98,15,0.3);
 }
 
 .submit-btn:disabled {
