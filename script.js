@@ -18,10 +18,26 @@ document.getElementById('gradbudForm').addEventListener('submit', async function
   btn.disabled = true;
 
   try {
-    const response = await fetch('https://formspree.io/f/xwvdodrz', {
+    const crmPayload = {
+      full_name: data.get('name'),
+      phone: data.get('phone'),
+      email: data.get('email') || '',
+      desired_course: data.get('program') === 'other' ? data.get('other_program') : data.get('program'),
+      desired_country: 'Moldova',
+      source: 'website',
+      form_name: 'Contact Form - Home',
+      page_url: window.location.href,
+      utm_source: new URLSearchParams(location.search).get('utm_source'),
+      utm_medium: new URLSearchParams(location.search).get('utm_medium'),
+      utm_campaign: new URLSearchParams(location.search).get('utm_campaign')
+    };
+
+    const response = await fetch('/api/submit-lead', {
       method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(crmPayload)
     });
 
     if (response.ok) {
